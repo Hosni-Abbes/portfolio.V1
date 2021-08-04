@@ -1,0 +1,9 @@
+# Prevent Directory Listing
+    Options -indexes
+# Echo Error Message
+    ErrorDocument 403 "You are not allowed to access this page!"
+    
+<FilesMatch "\.(php|js|rb|py|inc|txt)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
